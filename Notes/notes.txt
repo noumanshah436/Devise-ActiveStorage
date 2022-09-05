@@ -1,0 +1,27 @@
+
+https://rubygems.org/
+https://rubygems.org/gems/devise
+
+devise gem:
+
+Devise is the cornerstone gem for Ruby on Rails authentication. With Devise, creating a User that can log in and out of your application is so simple
+because Devise takes care of all the controllers necessary for user creation ( users_controller ) and for user sessions ( users_sessions_controller ).
+
+Go to https://rubygems.org/   and search for devise
+
+1) copy gem to gemfile  ( gem 'devise', '~> 4.8', '>= 4.8.1'  )
+Go to its doc at github https://github.com/heartcombo/devise
+
+
+2) bundle install will install all the gems in the gemfile
+
+3) rails generate devise:install
+
+complete instructions
+
+rails g devise:views
+
+rails generate devise user    ( this is migration command )
+rails db:migrate              ( migrate )
+
+Add links to navbar and style each page with bootstrap
