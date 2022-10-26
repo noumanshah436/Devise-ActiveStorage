@@ -8,6 +8,9 @@ https://www.youtube.com/watch?v=A23zCePXe74
 
 for validations we can use gem:
 https://github.com/igorkasyanchuk/active_storage_validations
+
+also add error messages in config/locals/en.yml
+
 *****************************
 
 rails active_storage:install

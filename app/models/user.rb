@@ -8,21 +8,16 @@ class User < ApplicationRecord
   after_commit :add_default_avatar, on: %i[create update]
 
   has_one_attached :avatar
-  validate :image_type, on: %i[update]
+  validates :avatar, attached: true, content_type:  ['image/jpeg','image/png','image/jpg']
+
+  # custom validation:
+  # validate :image_type, on: %i[update]
 
   def avatar_thumbnail
     avatar.variant( resize:"150x150!").processed
-
-    # if avatar.attached?
-    # avatar.variant( resize:"150x150!").processed
-    # else
-    #   "/default_profile.jpg"
-    # end
   end
 
-
   private
-
 
   def add_default_avatar
     unless avatar.attached?
