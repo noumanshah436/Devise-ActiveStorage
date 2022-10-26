@@ -16,6 +16,8 @@ sudo apt install imagemagick libvips
 
 
 gem 'mini_magick', '~> 4.8'
+sudo apt-get install imagemagick
+
 
 *****************************
 
