@@ -1,0 +1,26 @@
+devise user image:
+https://www.youtube.com/watch?v=BYvzLYRIZK4
+
+multiple images:
+https://www.youtube.com/watch?v=A23zCePXe74
+
+rails active_storage:install
+rails db:migrate
+
+
+gem "image_processing", "~> 1.0"
+sudo apt-get install imagemagic
+sudo apt install imagemagick libvips
+
+
+gem 'mini_magick', '~> 4.8'
+
+*****************************
+
+user= User.first
+
+ActiveStorage::Blob.service.path_for(user.avatar.key)
+
+"/home/dev/Rails/Day 8/Rails_Devise/storage/nN/yd/nNydy5Z9hY5evqt5oo44CYFT"
+
+*****************************
