@@ -6,6 +6,10 @@ https://www.youtube.com/watch?v=A23zCePXe74
 
 *****************************
 
+for validations we can use gem:
+https://github.com/igorkasyanchuk/active_storage_validations
+*****************************
+
 rails active_storage:install
 rails db:migrate
 
@@ -28,3 +32,18 @@ ActiveStorage::Blob.service.path_for(user.avatar.key)
 "/home/dev/Rails/Day 8/Rails_Devise/storage/nN/yd/nNydy5Z9hY5evqt5oo44CYFT"
 
 *****************************
+home index:
+<p><%= current_user.avatar.content_type.in?(%('image/jpeg image/png')) %></p>
+<p><%= %('image/jpeg image/png') %></p>
+<p><%= %w('image/jpeg image/png') %></p>
+
+
+*****************************
+
+devise edit:
+
+
+<div class="field">
+  <%= image_tag( resource.avatar_thumbnail) if resource.avatar.attached?  %><br />
+</div>
+

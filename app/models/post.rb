@@ -17,7 +17,7 @@ class Post < ApplicationRecord
 
     images.each do |image|
       if !image.content_type.in?(%('image/jpeg image/png'))
-        errors.add(:images, "needs to be a JPEG or PNG")
+        errors.add(:images, "needs to be JPEG or PNG")
       end
     end
   end

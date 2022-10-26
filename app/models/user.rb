@@ -8,16 +8,21 @@ class User < ApplicationRecord
   after_commit :add_default_avatar, on: %i[create update]
 
   has_one_attached :avatar
+  validate :image_type, on: %i[update]
 
   def avatar_thumbnail
     avatar.variant( resize:"150x150!").processed
-    
+
     # if avatar.attached?
     # avatar.variant( resize:"150x150!").processed
     # else
     #   "/default_profile.jpg"
     # end
   end
+
+
+  private
+
 
   def add_default_avatar
     unless avatar.attached?
@@ -29,7 +34,9 @@ class User < ApplicationRecord
     end
   end
 
-
-
-
+  def image_type
+    if !avatar.content_type.in?(%('image/jpeg image/png'))
+      errors.add(:avatar, "Must be a JPEG or PNG")
+    end
+  end
 end
