@@ -4,6 +4,8 @@ https://www.youtube.com/watch?v=BYvzLYRIZK4
 multiple images:
 https://www.youtube.com/watch?v=A23zCePXe74
 
+*****************************
+
 rails active_storage:install
 rails db:migrate
 
